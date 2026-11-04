@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Free Legal Resources</title>
+  <meta name="description" content="Law Friend Online 提供免費法律相關模板，希望讓法律資源更容易取得。">
+  <title>Law Friend Online</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       background: #f7f6f2;
       color: #293e36;
-      font-family: system-ui, "Noto Sans TC", sans-serif;
+      font-family: system-ui, -apple-system, "Noto Sans TC",
+        "Microsoft JhengHei", sans-serif;
       line-height: 1.8;
     }
 
@@ -19,37 +24,40 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 72px 24px 40px;
+      text-align: center;
     }
 
     header {
-      padding-bottom: 40px;
+      padding: 24px 0 48px;
       border-bottom: 1px solid #dce2da;
     }
 
     h1 {
       margin: 0 0 24px;
-      font-size: clamp(30px, 6vw, 48px);
-      line-height: 1.2;
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 700;
+      line-height: 1.3;
       letter-spacing: -1px;
     }
 
     header p {
-      margin: 0;
+      margin: 8px 0;
       color: #627268;
     }
 
     .tagline {
-      margin-bottom: 8px;
       color: #293e36;
-      font-size: 21px;
+      font-size: 20px;
       font-weight: 500;
     }
 
-    section { margin-top: 40px; }
+    section {
+      margin-top: 44px;
+    }
 
     h2 {
-      margin: 0 0 16px;
-      font-size: 23px;
+      margin: 0 0 20px;
+      font-size: 24px;
       font-weight: 600;
     }
 
@@ -62,23 +70,23 @@
     .card {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 100px;
+      justify-content: center;
+      min-height: 112px;
       padding: 24px;
       border: 1px solid #dfe5dc;
       border-radius: 16px;
-      background: #fff;
+      background: #ffffff;
       color: #293e36;
+      text-align: center;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 500;
       transition: border-color .2s, box-shadow .2s;
     }
 
     .card:hover {
       border-color: #668573;
-      box-shadow: 0 6px 18px rgb(41 62 54 / 7%);
+      box-shadow: 0 6px 18px rgb(41 62 54 / 8%);
     }
 
     .card:focus-visible {
@@ -86,75 +94,116 @@
       outline-offset: 4px;
     }
 
-    .arrow {
-      color: #668573;
-      font-size: 23px;
-      flex-shrink: 0;
+    /* 讓每一排的卡片整體置中 */
+    .grid.one {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 306px;
+      margin: 0 auto;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 628px;
+      margin: 0 auto;
     }
 
     footer {
       margin-top: 64px;
-      padding-top: 28px;
+      padding-top: 32px;
       border-top: 1px solid #dce2da;
     }
 
-    footer h2 { font-size: 19px; }
-    footer p { margin: 6px 0; }
-    .notice { color: #627268; font-size: 14px; }
+    footer h2 {
+      font-size: 20px;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    .notice {
+      color: #627268;
+      font-size: 14px;
+    }
 
     @media (max-width: 720px) {
-      main { padding-top: 40px; }
-      .grid { grid-template-columns: 1fr; }
-      .card { min-height: 80px; }
+      main {
+        padding: 32px 20px;
+      }
+
+      header {
+        padding: 16px 0 32px;
+      }
+
+      .tagline {
+        font-size: 18px;
+      }
+
+      .grid,
+      .grid.one,
+      .grid.two {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .card {
+        min-height: 88px;
+      }
+
+      section {
+        margin-top: 36px;
+      }
     }
   </style>
 </head>
+
 <body>
   <main>
     <header>
-      <h1 lang="en">Free Legal Resources</h1>
-      <p class="tagline">希望讓法律資源更容易取得</p>
-      <p>本專案整理以臺灣為主的免費法律資源，持續更新中</p>
+      <h1 lang="en">Law Friend Online</h1>
+      <p class="tagline">這是一個提供免費法律相關模板的網站</p>
+      <p>希望讓法律資源更容易取得</p>
     </header>
 
     <section aria-labelledby="contracts">
       <h2 id="contracts">合約模板</h2>
+
       <div class="grid">
         <a class="card" href="./brand-collaboration.pdf">
-          <span>品牌合作合約書</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          品牌合作合約書
         </a>
+
         <a class="card" href="./promotion-agreement.pdf">
-          <span>委託推廣合約書</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          委託推廣合約書
         </a>
+
         <a class="card" href="./license-agreement.pdf">
-          <span>授權合約</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          授權合約
         </a>
       </div>
     </section>
 
     <section aria-labelledby="terms">
       <h2 id="terms">使用條款</h2>
-      <div class="grid">
+
+      <div class="grid one">
         <a class="card" href="./terms-of-use.pdf">
-          <span>使用條款模板</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          使用條款模板
         </a>
       </div>
     </section>
 
     <section aria-labelledby="shopping">
       <h2 id="shopping">購物須知</h2>
-      <div class="grid">
+
+      <div class="grid two">
         <a class="card" href="./shopping-guide.pdf">
-          <span>購物須知模板</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          購物須知模板
         </a>
+
         <a class="card" href="./purchase-agency.pdf">
-          <span>代購委託書</span>
-          <span class="arrow" aria-hidden="true">↗</span>
+          代購委託書
         </a>
       </div>
     </section>
