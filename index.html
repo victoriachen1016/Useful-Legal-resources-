@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Legal Resources</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f7f6f2;
+      color: #293e36;
+      font-family: system-ui, "Noto Sans TC", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 72px 24px 40px;
+    }
+
+    header {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #dce2da;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      margin: 0;
+      color: #627268;
+    }
+
+    .tagline {
+      margin-bottom: 8px;
+      color: #293e36;
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    section { margin-top: 40px; }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 23px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 100px;
+      padding: 24px;
+      border: 1px solid #dfe5dc;
+      border-radius: 16px;
+      background: #fff;
+      color: #293e36;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      border-color: #668573;
+      box-shadow: 0 6px 18px rgb(41 62 54 / 7%);
+    }
+
+    .card:focus-visible {
+      outline: 3px solid #668573;
+      outline-offset: 4px;
+    }
+
+    .arrow {
+      color: #668573;
+      font-size: 23px;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid #dce2da;
+    }
+
+    footer h2 { font-size: 19px; }
+    footer p { margin: 6px 0; }
+    .notice { color: #627268; font-size: 14px; }
+
+    @media (max-width: 720px) {
+      main { padding-top: 40px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { min-height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1 lang="en">Free Legal Resources</h1>
+      <p class="tagline">希望讓法律資源更容易取得</p>
+      <p>本專案整理以臺灣為主的免費法律資源，持續更新中</p>
+    </header>
+
+    <section aria-labelledby="contracts">
+      <h2 id="contracts">合約模板</h2>
+      <div class="grid">
+        <a class="card" href="./brand-collaboration.pdf">
+          <span>品牌合作合約書</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="card" href="./promotion-agreement.pdf">
+          <span>委託推廣合約書</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="card" href="./license-agreement.pdf">
+          <span>授權合約</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="terms">
+      <h2 id="terms">使用條款</h2>
+      <div class="grid">
+        <a class="card" href="./terms-of-use.pdf">
+          <span>使用條款模板</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="shopping">
+      <h2 id="shopping">購物須知</h2>
+      <div class="grid">
+        <a class="card" href="./shopping-guide.pdf">
+          <span>購物須知模板</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="card" href="./purchase-agency.pdf">
+          <span>代購委託書</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <h2>關於本專案</h2>
+      <p>由 Victoria Chen 整理與維護。</p>
+      <p class="notice">
+        本站內容提供一般法律資訊，不構成個案法律意見。
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
